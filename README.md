@@ -13,3 +13,12 @@ docker-compose up -d
 cd  rabbitmq
 docker-compose up -d
 ```
+
+
+
+# rabbitmq、mysql、redis启动方法
+
+``` sh
+cd  mq-myql-redis
+docker-compose up -d
+```

@@ -1,0 +1,40 @@
+#docker-compose的版本
+version: '3'
+
+#定义服务
+services:
+
+  #服务名称，可随意定义  
+
+  rabbitmq:
+    image: reflying/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    container_name: br-rabbitmq
+    restart: always
+    environment:
+      #rabbitmq的初始用户名
+      RABBITMQ_DEFAULT_USER: admin
+      #rabbitmq的初始密码
+      RABBITMQ_DEFAULT_PASS: mq9102
+  mysql:
+    image: reflying/mariadb
+    container_name: br-mariadb
+    restart: always
+    ports:
+        - "3306:3306"
+    volumes:
+        - /data/mysql:/var/lib/mysql
+        - /var/log/mysql:/var/log/mysql
+    environment: 
+        MYSQL_ROOT_PASSWORD: Bhbr@!9102
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    container_name: br-redis
+    restart: always
+    #启动redis服务并添加密码,并开启redis的持久化
+    command: redis-server --appendonly yes
