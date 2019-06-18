@@ -22,3 +22,6 @@ sudo systemctl enable docker.service
 
 # 安装docker-compose
 pip install  docker-compose
+
+# 创建数据库目录
+mkdir /data/mysql -p
