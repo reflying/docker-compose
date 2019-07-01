@@ -7,6 +7,7 @@ services:
   #服务名称，可随意定义  
 
   rabbitmq:
+    restart: always
     image: reflying/rabbitmq
     ports:
       - "5672:5672"
@@ -19,6 +20,7 @@ services:
       #rabbitmq的初始密码
       RABBITMQ_DEFAULT_PASS: mq9102
   mysql:
+    restart: always
     image: reflying/mariadb
     container_name: br-mariadb
     restart: always
@@ -31,6 +33,7 @@ services:
         MYSQL_ROOT_PASSWORD: Bhbr@!9102
 
   redis:
+    restart: always
     image: redis
     ports:
       - "6379:6379"

@@ -7,6 +7,7 @@ services:
   #服务名称，可随意定义  
 
   rabbitmq:
+    restart: always
     image: reflying/rabbitmq
     ports:
       - "5672:5672"
