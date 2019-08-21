@@ -26,3 +26,7 @@ pip install  docker-compose
 # 创建数据库目录
 mkdir /data/mysql/logs -p
 mkdir /data/kafka
+
+# 加权限
+chmod +x kafka-sasl/conf/kafka-server-start
+
