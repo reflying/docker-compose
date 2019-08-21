@@ -25,3 +25,4 @@ pip install  docker-compose
 
 # 创建数据库目录
 mkdir /data/mysql/logs -p
+mkdir /data/kafka
