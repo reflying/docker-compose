@@ -30,4 +30,5 @@ mkdir /data/zookeeper -p
 
 # 加权限
 chmod +x kafka-sasl/conf/kafka-server-start
+chmod +x kafka-sasl/conf/zookeeper-server-start
 
