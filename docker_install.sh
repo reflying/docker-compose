@@ -23,9 +23,10 @@ sudo systemctl enable docker.service
 # 安装docker-compose
 pip install  docker-compose
 
-# 创建数据库目录
+# 创建数据目录
 mkdir /data/mysql/logs -p
-mkdir /data/kafka
+mkdir /data/kafka -p
+mkdir /data/zookeeper -p
 
 # 加权限
 chmod +x kafka-sasl/conf/kafka-server-start
