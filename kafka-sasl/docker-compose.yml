@@ -15,7 +15,8 @@ services:
     volumes:
        - ./conf/zookeeper-server-start:/usr/bin/zookeeper-server-start 
        - ./conf/zookeeper.properties:/etc/kafka/zookeeper.properties    
-       - /data/zookeeper:/var/lib/zookeeper    
+       - /data/zookeeper:/var/lib/zookeeper
+       - ./conf/kafka_server_jaas.conf:/etc/kafka/kafka_server_jaas.conf:ro
 
   broker:
     restart: always
