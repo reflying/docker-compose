@@ -10,6 +10,8 @@ services:
     ports:
       - "2181:2181"
     environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_MAXCLIENTCNXNS: 0
       ZOOKEEPER_AUTHPROVIDER.1: org.apache.zookeeper.server.auth.SASLAuthenticationProvider
       ZOOKEEPER_REQUIRECLIENTAUTHSCHEME: sasl
