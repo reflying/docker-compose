@@ -14,8 +14,10 @@ services:
       - "15672:15672"
     container_name: br-rabbitmq
     restart: always
+    volumes:
+        - /data/rabbitmq:/var/lib/rabbitmq
     environment:
       #rabbitmq的初始用户名
       RABBITMQ_DEFAULT_USER: admin
       #rabbitmq的初始密码
-      RABBITMQ_DEFAULT_PASS: mq9102
+      RABBITMQ_DEFAULT_PASS: Brkj@mq9102

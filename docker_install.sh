@@ -20,12 +20,13 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl enable docker.service
 
-# 安装docker-compose
-pip install  docker-compose
-
 # 创建数据目录
 mkdir /data/mysql/logs -p
 mkdir /data/kafka -p
 mkdir /data/zookeeper -p
+mkdir /data/rabbitmq  -p
 
+
+# 安装docker-compose
+pip install  docker-compose
 
