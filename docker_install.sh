@@ -26,7 +26,21 @@ mkdir /data/kafka -p
 mkdir /data/zookeeper -p
 mkdir /data/rabbitmq  -p
 
+#python3
+yum -y install "Development tools"
+yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel t k-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
+wget http://npm.taobao.org/mirrors/python/3.8.0/Python-3.8.0rc1.tar.xz
+mkdir /usr/local/python3
+tar -xvJf Python-3.8.0rc1.tar.xz
+cd Python-3.8.0rc1
+./configure --prefix=/usr/local/python3
+make && make install
+ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 
 # 安装docker-compose
-pip install  docker-compose
+pip3 install  docker-compose  -i https://pypi.douban.com/simple/ 
+ln -s /usr/local/python3/bin/docker-compose /usr/bin/docker-compose
+
+
 
